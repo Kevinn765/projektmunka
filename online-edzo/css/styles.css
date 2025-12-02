@@ -1,0 +1,69 @@
+
+/* css/styles.css - Dark mode */
+:root{
+  --bg:#0b0f14;
+  --card:#0f1720;
+  --muted:#9aa6b2;
+  --accent:#10b981; /* zöldes accent */
+  --primary:#2563eb; /* kék gomb, kontraszt */
+  --text:#e6eef6;
+  --shadow: 0 8px 30px rgba(2,6,23,0.6);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial;
+  background:linear-gradient(180deg,var(--bg),#07101a);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* navbar */
+.navbar{background:transparent;padding:0.8rem 1rem}
+.navbar-brand{font-weight:700;color:var(--text)}
+.navbar .nav-link{color:var(--muted)}
+.navbar .nav-link:hover{color:var(--text)}
+
+/* hero */
+.hero{
+  padding:4rem 0;
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+  border-bottom:1px solid rgba(255,255,255,0.03);
+}
+.hero .display-5{font-size:2rem;margin-bottom:0.3rem}
+.hero .lead{color:var(--muted);margin-bottom:1.2rem}
+
+/* buttons */
+.btn-primary{
+  background:linear-gradient(180deg,var(--primary),#1e40af);
+  border:none;
+  color:white;
+  box-shadow:0 6px 18px rgba(2,6,23,0.5);
+}
+.btn-outline-primary{
+  color:var(--primary);
+  border:1px solid rgba(37,99,235,0.18);
+  background:transparent;
+}
+
+/* cards */
+.card{background:var(--card);border:none;color:var(--text);box-shadow:var(--shadow);border-radius:12px}
+.card .card-title{color:var(--text);font-weight:600}
+.card .card-text{color:var(--muted)}
+
+/* footer */
+footer{color:var(--muted);border-top:1px solid rgba(255,255,255,0.03);padding:1.25rem 0;margin-top:3rem;text-align:center}
+
+/* forms */
+.form-control, .form-select{background:#0b1116;border:1px solid rgba(255,255,255,0.04);color:var(--text)}
+.alert-danger{background:#2b0a0a;color:#ffdede;border:none}
+.alert-success{background:#072614;color:#bffdde;border:none}
+
+/* responsive tweaks */
+@media (max-width:576px){
+  .hero .display-5{font-size:1.4rem}
+  .hero{padding:2rem 1rem}
+}
